@@ -1,0 +1,47 @@
+<main>
+    <section class="home-start">
+        <div class="categoy-links-list">
+            <a href=""><h1>Woman’s Fashion</h1><img src="assets/images/home-category-icon.png"></a>
+            <a href=""><h1>Men’s Fashion</h1><img src="assets/images/home-category-icon.png"></a>
+            <a href=""><h1>Electronics</h1><img src="assets/images/home-category-icon.png"></a>
+            <a href=""><h1>Home & Lifestyle</h1><img src="assets/images/home-category-icon.png"></a>
+            <a href=""><h1>Medicine</h1><img src="assets/images/home-category-icon.png"></a>
+            <a href=""><h1>Sports & Outdoor</h1><img src="assets/images/home-category-icon.png"></a>
+            <a href=""><h1>Baby’s & Toys</h1><img src="assets/images/home-category-icon.png"></a>
+            <a href=""><h1>Groceries & Pets</h1><img src="assets/images/home-category-icon.png"></a>
+            <a href=""><h1>Groceries & Pets</h1><img src="assets/images/home-category-icon.png"></a>
+        </div>
+        <div class="home-slides">
+            <app-carousel></app-carousel>
+        </div>
+    </section>
+    <app-shop-section 
+        [title] = 'flashSales.title'
+        [bigTitle] = 'flashSales.bigTitle'
+        [actions] = 'flashSales.actions' 
+        [viewType] = 'flashSales.viewType' 
+        [colums] = 'flashSales.colums'
+    ></app-shop-section>
+    <app-shop-section 
+        [title] = 'category.title'
+        [bigTitle] = 'category.bigTitle'
+        [actions] = 'category.actions' 
+        [viewType] = 'category.viewType' 
+        [colums] = 'category.colums'
+    ></app-shop-section>
+    <app-shop-section 
+        [title] = 'bestSellingProduct.title'
+        [bigTitle] = 'bestSellingProduct.bigTitle'
+        [actions] = 'bestSellingProduct.actions' 
+        [viewType] = 'bestSellingProduct.viewType' 
+        [colums] = 'bestSellingProduct.colums'
+    ></app-shop-section>
+    <app-announcement></app-announcement>
+    <app-shop-section 
+        [title] = 'ourProducts.title'
+        [bigTitle] = 'ourProducts.bigTitle'
+        [actions] = 'ourProducts.actions' 
+        [viewType] = 'ourProducts.viewType' 
+        [colums] = 'ourProducts.colums'
+    ></app-shop-section>
+</main>

@@ -1,0 +1,44 @@
+<section class="shop-section">
+    <div class="shop-title">
+        <div class="shop-title-bar"></div>
+        <h1 class="title-text">{{ title }}</h1>
+    </div>
+    <div class="shop-big-title">
+        <div class="shop-big-title-content">
+            <h1 class="big-title-text">{{ bigTitle }}</h1>
+            <div class="widgets"></div>
+        </div>
+        <div class="shop-big-title-actions">
+            @if (actions == "arrow") {
+                <div class="actions-arrow actions-arrow-left" (click)="scrollLeft()"><i class="fa-solid fa-circle-arrow-left"></i></div>
+                <div class="actions-arrow actions-arrow-right" (click)="scrollRight()"><i class="fa-solid fa-circle-arrow-right"></i></div>
+            }@else if(actions == "button"){
+                <a class="action-button-view">
+                    View All
+                </a>
+            }
+        </div>
+    </div>
+    @if (viewType == "icon") {
+    <div class="shop-product-section" #scrollContainer>
+        @for (item of [1,2,3,4,5,6,7]; track $index) {
+            <app-product-category></app-product-category>
+        }
+    </div>
+    }@else {
+    <div class="shop-product-section" #scrollContainer >
+        @for (item of [1,1,1,1,1,1]; track $index) {
+            <app-product-item></app-product-item>
+        }
+    </div>
+        @if(colums > 1){
+            <div class="shop-product-section" #scrollContainer >
+                @for (item of [1,1,1,1,1,1]; track $index) {
+                    <app-product-item></app-product-item>
+                }
+            </div>
+        }
+    }
+   
+    
+</section>

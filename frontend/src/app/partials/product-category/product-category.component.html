@@ -1,0 +1,6 @@
+<a class="product-category" [ngClass]="productCategoryClass" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
+    <div class="product-category-icon" [ngClass]="productCategoryIconClass">
+        <img src="{{ category.image }}" alt="">
+    </div>
+    <div class="product-category-name" [ngClass]="productCategoryNameClass">{{ category.name }}</div>
+</a>

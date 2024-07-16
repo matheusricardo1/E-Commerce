@@ -1,0 +1,21 @@
+
+.carousel-section{
+  display: flex;
+}
+.carousel-title{
+  font-family: "Poppins";
+  font-size: 16px;
+}
+.carousel-description{
+  font-family: "Poppins";
+  font-size: 48px;
+
+}
+.carousel-link{
+  cursor: pointer;
+  font-family: "Poppins";
+  font-size: 16px;
+  text-decoration: underline;
+  color: white;
+
+}

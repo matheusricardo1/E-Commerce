@@ -1,0 +1,42 @@
+<div class="shop-product-item" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
+    <div class="product-item-options">
+        <div class="item-options-first-layer">
+            <div class="product-item-offer">{{ product.price_offer }}</div>
+            <a class="product-item-favorite"><img src="assets/images/product-heart-icon.png" alt=""></a>
+        </div>
+        <div class="item-options-second-layer">
+            <a class="product-item-view"><img src="assets/images/product-view-icon.png" alt=""></a>
+        </div>
+    </div>
+    <div class="product-item-image">
+        <img class="product-item-img" [src]="product.image"  [alt]="">
+    </div>
+    <div class="add-product-cart" [ngClass]="animationState">
+        <a>Adicionar ao Carrinho</a>
+    </div>
+    <div class="product-item-info">
+        <h1>{{ product.name }}</h1>
+        <h2>{{ product.price }} <b class="product-item-dashed-price">{{ product.price_lined }}</b></h2>
+        <div class="product-item-info-rate">
+            <div class="product-item-info-rate-stars">
+            @for (star of [1,2,3,4,5]; track star) {
+                @if(star <= product.star || star - 1 + 0.3 <=product.star && product.star > star - 0.3){
+                    <div class="rate-star">
+                        <img src="assets/images/rate-star-full-icon.png" alt="">
+                    </div>
+                }@else if (star - 1 + 0.3 <= product.star && product.star <=star - 0.3 ) {
+                    <div class="rate-star">
+                        <img src="assets/images/rate-star-middle-icon.png" alt="">
+                    </div>
+                }
+                @else {
+                    <div class="rate-star">
+                        <img src="assets/images/rate-star-none-icon.png" alt="">
+                    </div>
+                }
+            }
+        </div>
+        <div class="product-item-info-rate-count">({{ product.rates_count }})</div>
+    </div>
+</div>
+</div>
